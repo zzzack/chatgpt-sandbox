@@ -213,7 +213,7 @@ export default () => {
             ref={inputRef!}
             disabled={systemRoleEditing()}
             onKeyDown={handleKeydown}
-            placeholder="Enter something..."
+            placeholder=""
             autocomplete="off"
             autofocus
             onInput={() => {
@@ -221,12 +221,12 @@ export default () => {
               inputRef.style.height = inputRef.scrollHeight + 'px';
             }}
             rows="1"
-            class='gen-textarea'
+            class='gen-textarea rounded-50'
           />
-          <button onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn>
-            Send
+          <button onClick={handleButtonClick} disabled={systemRoleEditing()} class='rounded-50' gen-slate-btn>
+            OK
           </button>
-          <button title="Clear" onClick={clear} disabled={systemRoleEditing()} gen-slate-btn>
+          <button title="Clear" onClick={clear} disabled={systemRoleEditing()} class='rounded-50'  gen-slate-btn>
             <IconClear />
           </button>
         </div>

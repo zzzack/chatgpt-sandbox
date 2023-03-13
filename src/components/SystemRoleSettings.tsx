@@ -19,7 +19,7 @@ export default (props: Props) => {
   }
 
   return (
-    <div class="my-4">
+    <div class="my-4 flex justify-center">
       <Show when={!props.systemRoleEditing()}>
         <Show when={props.currentSystemRoleSettings()}>
           <div>
@@ -33,9 +33,9 @@ export default (props: Props) => {
           </div>
         </Show>
         <Show when={!props.currentSystemRoleSettings() && props.canEdit()}>
-          <span onClick={() => props.setSystemRoleEditing(!props.systemRoleEditing())} class="sys-edit-btn">
+          <span onClick={() => props.setSystemRoleEditing(!props.systemRoleEditing())} class="sys-edit-btn rounded-50">
             <IconEnv />
-            <span>Add System Role</span>
+            <span>设置AI</span>
           </span>
         </Show>
       </Show>
@@ -43,21 +43,21 @@ export default (props: Props) => {
         <div>
           <div class="fi gap-1 op-50 dark:op-60">
             <IconEnv />
-            <span>System Role:</span>
+            <span>定义AI形象:</span>
           </div>
-          <p class="my-2 leading-normal text-sm op-50 dark:op-60">Gently instruct the assistant and set the behavior of the assistant.</p>
+          <p class="my-2 leading-normal text-sm op-50 dark:op-60">描述你想与之交谈的AI人物画像</p>
           <div>
             <textarea
               ref={systemInputRef!}
-              placeholder="You are a helpful assistant, answer as concisely as possible...."
+              placeholder="你是一只猫...."
               autocomplete="off"
               autofocus
               rows="3"
               gen-textarea
             />
           </div>
-          <button onClick={handleButtonClick} gen-slate-btn>
-            Set
+          <button onClick={handleButtonClick} gen-slate-btn class="rounded" text-sm>
+            OK
           </button>
         </div>
       </Show>

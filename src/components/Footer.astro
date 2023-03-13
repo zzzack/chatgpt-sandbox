@@ -1,11 +1,31 @@
+---
+import Logo from './Logo.astro'
+import Themetoggle from './Themetoggle.astro'
+---
+
 <footer>
-  <p mt-8 text-xs op-30>
-    <span pr-1>Made by</span>
+  <div class="flex justify-center">
+  <Themetoggle />
+</div>
+<div class="flex justify-center">
+
+  <p text-xs>
     <a
-      b-slate-link
-      href="https://tigg.cc" target="_blank"
+      
+      href="https://tigg.cc" target="_blank" class="text-gray-500"
     >
-      Tigg
+      挖互联网
     </a>
   </p>
+</div>
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?1e129396b2da968b180a82fc3c253859";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>  
 </footer>
+
